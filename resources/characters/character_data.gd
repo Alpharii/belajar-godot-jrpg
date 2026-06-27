@@ -1,0 +1,35 @@
+extends Resource
+class_name CharacterData
+
+# Identity
+@export var id: StringName
+@export var character_name: String
+@export_multiline var description: String
+
+# Visual
+@export var portrait: Texture2D
+@export var sprite: Texture2D
+@export var icon: Texture2D
+
+# Progression
+@export var level: int = 1
+@export var experiences: int = 0
+
+# Base Stats
+@export var max_hp: int = 100
+@export var max_mp: int = 50
+
+@export var strength: int = 10
+@export var vitality: int = 10
+@export var intelligence: int = 10
+@export var agility: int = 10
+@export var luck: int = 10
+
+# Starting Skills
+@export var skills: Array
+
+# Default Equipment sementara dictionary
+@export var weapon: Dictionary
+@export var armor: Dictionary
+@export var helmet: Dictionary
+@export var accessory: Dictionary
