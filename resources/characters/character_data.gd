@@ -11,10 +11,6 @@ class_name CharacterData
 @export var sprite: Texture2D
 @export var icon: Texture2D
 
-# Progression
-@export var level: int = 1
-@export var experiences: int = 0
-
 # Base Stats
 @export var max_hp: int = 100
 @export var max_mp: int = 50
