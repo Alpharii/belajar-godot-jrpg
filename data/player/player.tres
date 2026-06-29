@@ -1,18 +1,19 @@
 [gd_resource type="Resource" script_class="CharacterInstance" format=3 uid="uid://cxnxqb1xex3ay"]
 
-[ext_resource type="Script" uid="uid://dak1vfgkdvwnf" path="res://resources/characters/character_data.gd" id="1_3tcwt"]
 [ext_resource type="Script" uid="uid://bni6vawqrpsmi" path="res://resources/characters/character_instance.gd" id="1_cxasj"]
+[ext_resource type="Script" uid="uid://dak1vfgkdvwnf" path="res://resources/characters/character_data.gd" id="1_wx8at"]
+[ext_resource type="Script" uid="uid://bhr2cnfaborxl" path="res://resources/characters/components/stats_component.gd" id="2_3tcwt"]
 
-[sub_resource type="Resource" id="Resource_3tcwt"]
-script = ExtResource("1_3tcwt")
-id = &"player"
-character_name = "player"
-description = "player"
+[sub_resource type="Resource" id="Resource_jr2o1"]
+script = ExtResource("1_wx8at")
 metadata/_custom_type_script = "uid://dak1vfgkdvwnf"
+
+[sub_resource type="Resource" id="Resource_wx8at"]
+script = ExtResource("2_3tcwt")
+metadata/_custom_type_script = "uid://bhr2cnfaborxl"
 
 [resource]
 script = ExtResource("1_cxasj")
-data = SubResource("Resource_3tcwt")
-current_hp = 100
-current_mp = 50
+data = SubResource("Resource_jr2o1")
+stats = SubResource("Resource_wx8at")
 metadata/_custom_type_script = "uid://bni6vawqrpsmi"

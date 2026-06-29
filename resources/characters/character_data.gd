@@ -12,14 +12,7 @@ class_name CharacterData
 @export var icon: Texture2D
 
 # Base Stats
-@export var max_hp: int = 100
-@export var max_mp: int = 50
-
-@export var strength: int = 10
-@export var vitality: int = 10
-@export var intelligence: int = 10
-@export var agility: int = 10
-@export var luck: int = 10
+@export var base_stats: StatsData
 
 # Starting Skills
 @export var skills: Array

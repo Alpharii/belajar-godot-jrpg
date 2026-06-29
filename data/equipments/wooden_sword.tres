@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EquipmentData" format=3 uid="uid://ctkhcjs3q4yq7"]
+
+[ext_resource type="Script" uid="uid://g3iws5qx1qg3" path="res://resources/equipments/equipment_data.gd" id="1_daaqa"]
+[ext_resource type="Script" uid="uid://bjws1hnrp74hl" path="res://resources/type/stat_data.gd" id="2_2ncft"]
+
+[sub_resource type="Resource" id="Resource_s3ytq"]
+script = ExtResource("2_2ncft")
+strength = 5
+metadata/_custom_type_script = "uid://bjws1hnrp74hl"
+
+[resource]
+script = ExtResource("1_daaqa")
+id = &"wooden_sword"
+equipment_name = "Wooden Sword"
+description = "A normal looking sword made by ordinary wood"
+buy_price = 10
+sell_price = 5
+stat_bonus = SubResource("Resource_s3ytq")
+metadata/_custom_type_script = "uid://g3iws5qx1qg3"

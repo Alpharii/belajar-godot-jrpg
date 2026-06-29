@@ -1,8 +1,62 @@
-[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cdmy2dlry00w0"]
+[gd_resource type="Resource" script_class="CharacterInstance" format=3 uid="uid://cdmy2dlry00w0"]
 
-[ext_resource type="Script" uid="uid://dak1vfgkdvwnf" path="res://resources/characters/character_data.gd" id="1_jsa5i"]
+[ext_resource type="Script" uid="uid://dak1vfgkdvwnf" path="res://resources/characters/character_data.gd" id="1_i3p3b"]
+[ext_resource type="Script" uid="uid://bni6vawqrpsmi" path="res://resources/characters/character_instance.gd" id="1_jsa5i"]
+[ext_resource type="Script" uid="uid://bqc251msmy0ct" path="res://resources/characters/components/equipment_component.gd" id="2_ddlgi"]
+[ext_resource type="Script" uid="uid://bm7364c6odrit" path="res://resources/characters/components/inventory_component.gd" id="3_yysnc"]
+[ext_resource type="Script" uid="uid://y3iht68umr27" path="res://resources/characters/components/skills_components.gd" id="5_dkux5"]
+[ext_resource type="Script" uid="uid://byb2crhy2e25a" path="res://resources/data/stat_data.gd" id="6_n45u6"]
+[ext_resource type="Script" uid="uid://bhr2cnfaborxl" path="res://resources/characters/components/stats_component.gd" id="7_xoal6"]
+[ext_resource type="Script" uid="uid://qtsn1k3ilgxc" path="res://resources/characters/components/status_component.gd" id="8_qsce8"]
+
+[sub_resource type="Resource" id="Resource_1eaqy"]
+script = ExtResource("1_i3p3b")
+id = &"hero"
+character_name = "hero"
+description = "cool hero"
+metadata/_custom_type_script = "uid://dak1vfgkdvwnf"
+
+[sub_resource type="Resource" id="Resource_bte7t"]
+script = ExtResource("2_ddlgi")
+metadata/_custom_type_script = "uid://bqc251msmy0ct"
+
+[sub_resource type="Resource" id="Resource_q2fqd"]
+script = ExtResource("3_yysnc")
+money = 100
+metadata/_custom_type_script = "uid://bm7364c6odrit"
+
+[sub_resource type="Resource" id="Resource_ntejl"]
+script = ExtResource("5_dkux5")
+metadata/_custom_type_script = "uid://y3iht68umr27"
+
+[sub_resource type="Resource" id="Resource_bxoxk"]
+script = ExtResource("6_n45u6")
+max_hp = 100
+max_mp = 50
+strength = 10
+vitality = 10
+intelligence = 10
+agility = 10
+luck = 10
+metadata/_custom_type_script = "uid://byb2crhy2e25a"
+
+[sub_resource type="Resource" id="Resource_gu0cd"]
+script = ExtResource("7_xoal6")
+current_hp = 100
+current_mp = 50
+current_stats = SubResource("Resource_bxoxk")
+metadata/_custom_type_script = "uid://bhr2cnfaborxl"
+
+[sub_resource type="Resource" id="Resource_urh4w"]
+script = ExtResource("8_qsce8")
+metadata/_custom_type_script = "uid://qtsn1k3ilgxc"
 
 [resource]
 script = ExtResource("1_jsa5i")
-character_name = "Hero"
-metadata/_custom_type_script = "uid://dak1vfgkdvwnf"
+data = SubResource("Resource_1eaqy")
+stats = SubResource("Resource_gu0cd")
+equipment = SubResource("Resource_bte7t")
+status_effect = SubResource("Resource_urh4w")
+inventory = SubResource("Resource_q2fqd")
+skills = SubResource("Resource_ntejl")
+metadata/_custom_type_script = "uid://bni6vawqrpsmi"

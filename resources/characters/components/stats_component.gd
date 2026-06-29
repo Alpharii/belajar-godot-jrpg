@@ -1,11 +1,11 @@
-extends Node
+extends Resource
+class_name StatComponents
 
+# Progression
+@export var level: int = 1
+@export var experiences: int = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var current_hp: int
+@export var current_mp: int
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+@export var current_stats: StatsData

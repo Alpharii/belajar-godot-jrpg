@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="EquipmentData" format=3 uid="uid://ds3ol8fb02orh"]
+
+[ext_resource type="Script" uid="uid://g3iws5qx1qg3" path="res://resources/equipments/equipment_data.gd" id="1_m6hrg"]
+
+[sub_resource type="GDScript" id="GDScript_m6hrg"]
+script/source = "extends Resource
+class_name StatData
+
+@export var max_hp: int = 0
+@export var max_mp: int = 0
+
+@export var strength: int = 0
+@export var vitality: int = 0
+@export var intelligence: int = 0
+@export var agility: int = 0
+@export var luck: int = 0
+"
+
+[sub_resource type="Resource" id="Resource_c0bku"]
+script = SubResource("GDScript_m6hrg")
+max_hp = 20
+vitality = 2
+metadata/_custom_type_script = "uid://bjws1hnrp74hl"
+
+[resource]
+script = ExtResource("1_m6hrg")
+id = &"leather_armor"
+equipment_name = "Leather Armor"
+description = "The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil."
+equipment_type = 1
+buy_price = 15
+sell_price = 10
+stat_bonus = SubResource("Resource_c0bku")
+metadata/_custom_type_script = "uid://g3iws5qx1qg3"
