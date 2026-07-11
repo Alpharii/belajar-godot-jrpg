@@ -19,6 +19,7 @@ enum EffectType {
 @export var stat_scalings: Array[StatScalingData] = []
 
 @export_group("Effects")
-@export var status_effect: Array = []
+@export var status_effects: Array = []
 @export var duration_turns: int = 0
 @export var custom_effect: SkillCustomEffect
+	
