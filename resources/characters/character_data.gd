@@ -15,7 +15,7 @@ class_name CharacterData
 @export var base_stats: StatsData
 
 # Starting Skills
-@export var skills: Array
+@export var skills: Array[SkillData]
 
 # Default Equipment sementara dictionary
 @export var weapon: Dictionary
