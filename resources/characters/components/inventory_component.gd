@@ -1,5 +1,5 @@
 extends Resource
 class_name InventoryComponents
 
-@export var inventory: Array
-@export var money: int
+@export var slots: Array[InventorySlot] = []
+@export var money: int = 0
